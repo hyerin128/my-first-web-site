@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+}
+a {
+    color:whitesmoke;
+    text-decoration: none;
+}
+ol {
+    background-color: rgb(68, 85, 38);
+    width: 120px;
+    margin: 0;
+    padding: 30px;
+    color: whitesmoke;
+}
+#top {
+    text-align: center;
+    background-color: rgb(68, 85, 38);
+    padding:30px;
+    line-height: 15px;
+}
+#bottom {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+}
+#bottom ol {
+    padding-left: 43px;
+}
+#text {
+    margin-top: 30px;
+}
+@media(max-width:800px) {
+    #bottom {
+    display: block;
+    }
+    ol {
+        width: 100%;
+
+    }
+    #text {
+    margin-left: 30px;
+    }
+}
