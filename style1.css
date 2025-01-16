@@ -1,10 +1,12 @@
 body {
     margin: 0;
 }
+
 a {
-    color:whitesmoke;
+    color: whitesmoke;
     text-decoration: none;
 }
+
 ol {
     background-color: rgb(68, 85, 38);
     width: 120px;
@@ -12,31 +14,49 @@ ol {
     padding: 30px;
     color: whitesmoke;
 }
-#top {
+
+header {
     text-align: center;
     background-color: rgb(68, 85, 38);
-    padding:30px;
+    padding: 30px;
     line-height: 15px;
 }
-#bottom {
-    display: grid;
-    grid-template-columns: 280px 1fr;
+
+nav {
+    background-color: rgb(68, 85, 38);
+    padding: 20px;
 }
-#bottom ol {
+
+nav ol {
     padding-left: 43px;
 }
-#text {
+
+main {
+    display: flex; /* Flexbox로 변경 */
+    justify-content: center; /* 가로 방향 중앙 정렬 */
+    align-items: center; /* 세로 방향 중앙 정렬 */
+    flex-direction: column; /* 세로 배치 */
+    min-height: calc(100vh - 120px); /* 화면 높이에서 header와 nav 높이 제외 */
+    text-align: center;
+}
+
+main #text {
     margin-top: 30px;
 }
-@media(max-width:800px) {
-    #bottom {
-    display: block;
-    }
-    ol {
-        width: 100%;
 
+@media (max-width: 800px) {
+    nav, main {
+        display: block; /* 좁은 화면에서는 Block으로 변경 */
     }
-    #text {
-    margin-left: 30px;
+
+    nav {
+        width: 100%; /* 전체 너비 차지 */
+        text-align: center; /* 텍스트 중앙 정렬 */
+        margin-bottom: 20px;
+    }
+
+    main #text {
+        margin-left: 0;
+        padding: 20px;
     }
 }
